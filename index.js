@@ -30,5 +30,21 @@ app.delete('/borrar', (request, response) => {
    response.send("se borro " + id);
 });
 
+app.get('/suma', (request, response) => {
+  const numero1 = request.query.numero1;
+  const numero2 = request.query.numero2;
+  const suma = suma_numeros(numero1,numero2);
+  response.send("la suma es " + suma);
+  
+
+  function suma_numeros(num1,num2){
+    let sumanumeros = parseInt(num1, 10) + parseInt(num2, 10);
+    return sumanumeros;
+    console.log(sumanumeros);
+  }
+
+});
+
+
 
 app.listen(port, () => console.log('El servidor esta corriendo'));

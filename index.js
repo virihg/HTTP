@@ -36,11 +36,11 @@ app.get('/suma', (request, response) => {
   const suma = suma_numeros(numero1,numero2);
   response.send("la suma es " + suma);
   
-
+//funcion para suma de los numeros
   function suma_numeros(num1,num2){
-    let sumanumeros = parseInt(num1, 10) + parseInt(num2, 10);
+    let sumanumeros = parseInt(num1, 10) + parseInt(num2, 10);//con parseInt porque los toma como string
     return sumanumeros;
-    console.log(sumanumeros);
+    console.log(sumanumeros);//console log para revisar que valor trae suma
   }
 
 });
